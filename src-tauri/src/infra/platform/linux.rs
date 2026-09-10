@@ -17,7 +17,9 @@ use std::time::Duration;
 
 use enigo::{Direction, Enigo, Key, Keyboard, Settings};
 use once_cell::sync::Lazy;
-use x11rb::protocol::xproto::ConnectionExt as _;
+// NOTE: `wrapper::ConnectionExt` is a subtrait of `xproto::ConnectionExt` that
+// additionally provides `change_property8/32`; importing it alone covers every
+// X11 call in this module, so no separate xproto import is needed.
 use x11rb::wrapper::ConnectionExt as _;
 
 use crate::error::{Error, Result};
