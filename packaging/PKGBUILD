@@ -8,7 +8,7 @@ arch=('x86_64')
 url="https://github.com/nexouya/nexus-clipboard"
 license=('AGPL3')
 depends=('webkit2gtk-4.1' 'libayatana-appindicator' 'librsvg' 'openssl')
-makedepends=('cargo' 'nodejs' 'pnpm')
+makedepends=('cargo' 'nodejs' 'pnpm' 'webkit2gtk-4.1' 'gtk3' 'libayatana-appindicator' 'librsvg' 'openssl' 'libxfixes')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
 sha256sums=('SKIP')
 

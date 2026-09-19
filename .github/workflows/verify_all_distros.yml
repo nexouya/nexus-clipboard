@@ -140,5 +140,5 @@ jobs:
         if: steps.cargo_build.outcome == 'failure'
         run: exit 1
 
-      - name: Build Bundles (deb, appimage)
-        run: pnpm tauri build --bundles deb,appimage
+      - name: Build Bundles (deb, rpm, appimage)
+        run: pnpm tauri build --bundles deb,rpm,appimage
